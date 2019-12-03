@@ -1,20 +1,12 @@
 import random
-import time
-
-pccoise = int(random.randint(1, 10))
+pcchoise = int(random.randint(1, 10))
 gamemode = 1
-
 while gamemode == 1:
     guess = int(input("1-10?: "))
-    if guess < pccoise:
+    if guess < pcchoise:
         print("Större!")
-    
-    elif guess > pccoise:
+    elif guess > pcchoise:
         print("Lägre!")
-
-    elif pccoise == guess:
-        print("Rätt!")
-        pccoise = int(random.randint(1, 10))
-
-    else:
-        gamemode = 0
+    elif pcchoise == guess:
+        print("Rätt! Spela igen!")
+        pcchoise = int(random.randint(1, 10))
